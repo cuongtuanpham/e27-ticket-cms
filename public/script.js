@@ -19,15 +19,13 @@ var addNewSection = function(val){
 	var element = [];
 	element += "<div class = 'section'>"
 	element += "<input type='text' placeholder='section name'>";
-	element += "<div class='field'>";
-	element += "</div>"
 	element += "<button id='add-field'>Add New Field</button>";
 	element += "</div>";
 	$(val).before(element);
 };
 
 var deleteElement = function(val){
-	$(val).closest('div').remove();
+	$(val).parent('div').parent('div').parent('div').parent('li').remove();
 };
 
 //=============================================================
@@ -43,3 +41,14 @@ $('.main').on('click', '#add-section', function(){
 $('.main').on('click', 'i.delete', function(){
 	deleteElement(this);
 });
+
+$(function() {
+    $( "#sort" ).sortable();
+    $( "#pre-sort" ).sortable({
+    	connectWith: "#sort"
+    });
+    $(".pre-text").draggable({
+    	connectToSortable: '#sort',
+    	helper: 'clone'
+    });
+ });
