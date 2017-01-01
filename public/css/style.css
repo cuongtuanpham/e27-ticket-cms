@@ -34,3 +34,55 @@ h1 {
   min-height: 50%;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+h2 {
+  border-bottom: 1px solid #716d6d;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-bottom: 1rem;
+  font-size: 18px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h2 {
+      font-size: 27px; } }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 30px; } }
+
+.section, .field {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 2em; }
+  .section .field, .field .field {
+    margin: 1em; }
+
+.lbl {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 44px;
+  background: #898989;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+
+.lbl:after {
+  position: absolute;
+  left: -2px;
+  top: -3px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+  content: '';
+  transition: all 0.3s ease; }
+
+.lbl:active:after {
+  transform: scale(1.15, 0.85); }
+
+.cbx:checked ~ label {
+  background: #6fbeb5; }
+
+.cbx:checked ~ label:after {
+  left: 20px;
+  background: #179588; }
