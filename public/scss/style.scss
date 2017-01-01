@@ -1,0 +1,62 @@
+$primary-color: #009688;
+$white: #fff;
+$font-size: 18px;
+$font-size-tablet: 27px;
+$font-size-desktop: 30px;
+//=========Mixin Responsive==========================
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+//====================================================
+
+body{
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+header{
+	background-color: $primary-color;
+	width: 100%;
+	min-height: 30%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+h1{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	font-size: $font-size;
+	margin: 0;
+	font-weight: bold;
+	color: $white;
+	@include tablet {
+		font-size: $font-size-tablet;
+	}
+	@include desktop {
+		font-size: $font-size-desktop;
+	}
+}
+
+.main{
+	position: absolute;
+	transform: translate(-50%, 0);
+	left: 50%;
+	top: 25%;
+	width: 80%;
+	min-height: 50%;
+	background-color: $white;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
