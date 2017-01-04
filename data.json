@@ -1,15 +1,16 @@
 {
 	"name":{
-		"fieldName": "Name",
+		"fieldName": "YOUR FULL NAME",
 		"type":["Textbox"],
 		"require":"true"
 	},
 	"email":{
-		"fieldName": "Email",
+		"fieldName": "YOUR EMAIL",
 		"type":["Email"],
 		"require":"true"
 	},
 	"country":{
+		"id":"Country",
 		"fieldName": "Country",
 		"type":[
 			"Select 2 box(1-value)", "Select 2 box (multiple)"
@@ -17,9 +18,34 @@
 		"require": "false"
 	},
 	"industry":{
+		"id":"industry",
 		"fieldName": "Industry Vertical",
 		"type":[
-			"Select 2 box(1-value)", "Select 2 box (multiple)"
+			"Select 2 box(1-value)", "Select 2 box (multiple-value)"
+		],
+		"require": "false"
+	},
+	"round":{
+		"id":"round",
+		"fieldName": "Round of Funding",
+		"type":[
+			"Radio", "Dropdown", "Checkbox"
+		],
+		"require": "false"
+	},
+	"amountRaise":{
+		"id":"amountRaise",
+		"fieldName": "Amount Raise",
+		"type":[
+			"Number"
+		],
+		"require": "false"
+	},
+	"amountToRaise":{
+		"id":"amountToRaise",
+		"fieldName": "Amount to raise",
+		"type":[
+			"Number"
 		],
 		"require": "false"
 	},
@@ -29,11 +55,19 @@
 		"require":"true",
 		"options":[
 			{
-				"fieldName":"Looking for funding",
+				"fieldName":"Looking for Funding",
 				"require":"false"
 			},
 			{
-				"fieldName":"Looking for investor",
+				"fieldName":"Looking for Investor",
+				"require":"false"
+			},
+			{
+				"fieldName":"Looking for Customer",
+				"require":"false"
+			},
+			{
+				"fieldName":"Looking for Product",
 				"require":"false"
 			}
 		]
