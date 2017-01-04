@@ -82,10 +82,11 @@ h2, .section h3{
 	}
 }
 
-.title{
+.title, .description{
 	border: 1px solid #cacaca;
 	padding: 1rem 0 1rem 2rem;
 	margin-top: 1rem;
+	margin-left: 5rem;
 	font-size: $font-size - 12px;
 	@include tablet {
 		font-size: $font-size-tablet - 12px;
@@ -235,3 +236,4 @@ ul#pre-list li{
 	text-transform: uppercase;
 	color: $white;
 }
+
