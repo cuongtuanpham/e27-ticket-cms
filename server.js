@@ -7,6 +7,7 @@ var morgan = require('morgan');
 // var session = require('express-session');
 var parseurl = require('parseurl');
 // var cookieParser = require('cookie-parser');
+fs = require('fs');
 //==========================================
 //Set the port for API
 var port = process.env.PORT || 3000;
@@ -30,6 +31,11 @@ app.use(function(req, res, next) {
 
 //====Routes====
 app.use('/', express.static(__dirname + "/public"));
+app.get('/data',function(req,res){
+	var contents = fs.readFileSync("data.json");
+	var jsonContent = JSON.parse(contents);
+	res.send(jsonContent);
+});
 //====Start server====
 app.listen(port);
 console.log(port + " is connected"); 
