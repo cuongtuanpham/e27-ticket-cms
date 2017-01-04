@@ -1,39 +1,39 @@
 {
 	"name":{
-		"field-name": "Name",
-		"type":"Textbox",
+		"fieldName": "Name",
+		"type":["Textbox"],
 		"require":"true"
 	},
 	"email":{
-		"field-name": "Email",
-		"type":"Email",
+		"fieldName": "Email",
+		"type":["Email"],
 		"require":"true"
 	},
 	"country":{
-		"field-name": "Country",
+		"fieldName": "Country",
 		"type":[
 			"Select 2 box(1-value)", "Select 2 box (multiple)"
 		],
 		"require": "false"
 	},
 	"industry":{
-		"field-name": "Industry Vertical",
+		"fieldName": "Industry Vertical",
 		"type":[
 			"Select 2 box(1-value)", "Select 2 box (multiple)"
 		],
 		"require": "false"
 	},
 	"objective":{
-		"field-name":"Objective",
-		"type":"Dropdown",
+		"fieldName":"Objective",
+		"type":["Dropdown"],
 		"require":"true",
 		"options":[
 			{
-				"field-name":"Looking for funding",
+				"fieldName":"Looking for funding",
 				"require":"false"
 			},
 			{
-				"field-name":"Looking for investor",
+				"fieldName":"Looking for investor",
 				"require":"false"
 			}
 		]

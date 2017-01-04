@@ -1,4 +1,5 @@
 $primary-color: #009688;
+$secondary-color:  #ff3d00;
 $white: #fff;
 $font-size: 18px;
 $font-size-tablet: 27px;
@@ -85,4 +86,82 @@ h2{
 	@include desktop {
 		font-size: $font-size-desktop - 5px;
 	}
+}
+
+//Input and select==================================================================
+.each-field{
+	margin: 1em;
+}
+
+.each-field input, select, i{
+	width: 100%;
+	height: 100%;
+}
+
+.each-field i{
+	padding: 1rem 0 0.7rem 0rem;
+	cursor: pointer;
+}
+
+.each-field select{
+	padding: 0.7rem 0 0.7rem 0.5rem;
+	font-size: $font-size - 12px;
+	@include tablet {
+		font-size: $font-size-tablet - 12px;
+	}
+	@include desktop {
+		font-size: $font-size-desktop - 12px;
+	}
+}
+
+.each-field input{
+	border: 1px solid #cacaca;
+	padding: 1rem 0 1rem 2rem;
+	font-size: $font-size - 12px;
+	cursor: pointer;
+	@include tablet {
+		font-size: $font-size-tablet - 12px;
+	}
+	@include desktop {
+		font-size: $font-size-desktop - 12px;
+	}
+}
+
+.each-field div{
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+ul{
+	list-style: none;
+}
+
+#sort-field li{
+	border-left: 10px solid $primary-color;
+	padding-left: 10px;
+	cursor: move;
+}
+
+//========================================
+//Pre-build
+.pre-build p{
+	border-left: 10px solid $secondary-color;
+	padding: 10px;
+	font-weight: bold;
+	font-size: $font-size - 12px;
+	cursor: move;
+	@include tablet {
+		font-size: $font-size-tablet - 12px;
+	}
+	@include desktop {
+		font-size: $font-size-desktop - 12px;
+	}
+}
+
+.each-prebuild{
+	margin: 1em 0 1em 0rem;
+}
+
+ul#pre-list li{
+	cursor: move;
 }
