@@ -73,12 +73,12 @@ h2, .section h3{
 	margin-left: 1em;
 	padding-bottom: 1rem;
 	display: inline-block;
-	font-size: $font-size - 5px;
+	font-size: $font-size;
 	@include tablet {
-		font-size: $font-size-tablet - 5px;
+		font-size: $font-size-tablet;
 	}
 	@include desktop {
-		font-size: $font-size-desktop - 5px;
+		font-size: $font-size-desktop;
 	}
 }
 
@@ -87,9 +87,9 @@ h2, .section h3{
 	padding: 1rem 0 1rem 2rem;
 	margin-top: 1rem;
 	margin-left: 5rem;
-	font-size: $font-size - 12px;
+	font-size: $font-size - 2px;
 	@include tablet {
-		font-size: $font-size-tablet - 12px;
+		font-size: $font-size-tablet - 5px;
 	}
 	@include desktop {
 		font-size: $font-size-desktop - 12px;
@@ -122,9 +122,9 @@ h2, .section h3{
 .main-section select, 
 .sub-section select{
 	padding: 0.7rem 0 0.7rem 0.5rem;
-	font-size: $font-size - 12px;
+	font-size: $font-size - 2px;
 	@include tablet {
-		font-size: $font-size-tablet - 12px;
+		font-size: $font-size-tablet - 5px;
 	}
 	@include desktop {
 		font-size: $font-size-desktop - 12px;
@@ -135,10 +135,10 @@ h2, .section h3{
 .sub-section input{
 	border: 1px solid #cacaca;
 	padding: 1rem 0 1rem 2rem;
-	font-size: $font-size - 12px;
+	font-size: $font-size - 2px;
 	cursor: pointer;
 	@include tablet {
-		font-size: $font-size-tablet - 12px;
+		font-size: $font-size-tablet - 5px;
 	}
 	@include desktop {
 		font-size: $font-size-desktop - 12px;
@@ -167,10 +167,10 @@ ul{
 	border-left: 10px solid $secondary-color;
 	padding: 10px;
 	font-weight: bold;
-	font-size: $font-size - 12px;
+	font-size: $font-size - 2px;
 	cursor: move;
 	@include tablet {
-		font-size: $font-size-tablet - 12px;
+		font-size: $font-size-tablet - 5px;
 	}
 	@include desktop {
 		font-size: $font-size-desktop - 12px;
@@ -208,9 +208,9 @@ ul#pre-list li{
 .section p{
 	padding: 0.5em 1.5em;
 	font-weight: bold;
-	font-size: $font-size - 12px;
+	font-size: $font-size - 2px;
 	@include tablet {
-		font-size: $font-size-tablet - 12px;
+		font-size: $font-size-tablet - 5px;
 	}
 	@include desktop {
 		font-size: $font-size-desktop - 12px;
