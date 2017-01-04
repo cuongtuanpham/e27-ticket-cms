@@ -1,13 +1,17 @@
 body {
   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; }
 
-header {
-  background-color: #009688;
+#bg {
+  overflow: hidden;
   width: 100%;
-  min-height: 30%;
-  position: absolute;
-  top: 0;
-  left: 0; }
+  height: 200px;
+  margin-bottom: 5em;
+  position: relative; }
+
+img {
+  height: auto;
+  width: 100%;
+  background-size: cover; }
 
 h1 {
   position: absolute;
@@ -17,7 +21,7 @@ h1 {
   font-size: 18px;
   margin: 0;
   font-weight: bold;
-  color: #fff; }
+  color: #009688; }
   @media (min-width: 768px) and (max-width: 1023px) {
     h1 {
       font-size: 27px; } }
@@ -25,38 +29,26 @@ h1 {
     h1 {
       font-size: 30px; } }
 
-.main, .pre-build {
-  position: absolute;
-  transform: translate(-50%, 0);
-  left: 40%;
-  top: 25%;
-  width: 60%;
-  min-height: 50%;
+.main, .pre-build, .section {
   background-color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
-.pre-build {
-  position: absolute;
-  transform: translate(-50%, 0);
-  position: fixed;
-  left: 85%;
-  top: 25%;
-  width: 20%;
-  min-height: 50%;
-  background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+.right-panel {
+  width: 100%; }
 
-h2 {
+h2, .section h3 {
   border-bottom: 1px solid #716d6d;
   margin-left: 1em;
   padding-bottom: 1rem;
   display: inline-block;
   font-size: 13px; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    h2 {
+    h2, .section h3 {
       font-size: 22px; } }
   @media (min-width: 1024px) {
-    h2 {
+    h2, .section h3 {
       font-size: 25px; } }
 
 .title {
@@ -71,51 +63,61 @@ h2 {
     .title {
       font-size: 18px; } }
 
-#sort-field li div.objective {
+#main-field li li.obj {
   margin-left: 10px;
+  margin-top: 10px;
   border-left: 5px double #ff3d00; }
 
-.each-field {
+.main-section, .sub-section {
   margin: 1em; }
 
-.each-field input, select, i {
+.main-section input, select, i,
+.sub-section input, select, i {
   width: 100%;
   height: 100%; }
 
-.each-field i {
+.main-section i,
+.sub-section i {
   padding: 1rem 0 0.7rem 0rem;
   cursor: pointer; }
 
-.each-field select {
+.main-section select,
+.sub-section select {
   padding: 0.7rem 0 0.7rem 0.5rem;
   font-size: 6px; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .each-field select {
+    .main-section select,
+    .sub-section select {
       font-size: 15px; } }
   @media (min-width: 1024px) {
-    .each-field select {
+    .main-section select,
+    .sub-section select {
       font-size: 18px; } }
 
-.each-field input {
+.main-section input,
+.sub-section input {
   border: 1px solid #cacaca;
   padding: 1rem 0 1rem 2rem;
   font-size: 6px;
   cursor: pointer; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .each-field input {
+    .main-section input,
+    .sub-section input {
       font-size: 15px; } }
   @media (min-width: 1024px) {
-    .each-field input {
+    .main-section input,
+    .sub-section input {
       font-size: 18px; } }
 
-.each-field div {
+.main-section div,
+.sub-section div {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem; }
 
 ul {
   list-style: none; }
 
-#sort-field li .row {
+#main-field li .row, .sub-section li .row {
   border-left: 10px solid #009688;
   padding-left: 5px;
   cursor: move; }
@@ -149,3 +151,34 @@ ul#pre-list li {
 
 #addField {
   background-color: #009688; }
+
+.section {
+  padding: 1em; }
+
+.section p {
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  font-size: 6px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .section p {
+      font-size: 15px; } }
+  @media (min-width: 1024px) {
+    .section p {
+      font-size: 18px; } }
+
+.section ol p {
+  padding: 0.2em; }
+
+.section input {
+  width: 100%;
+  border: 2px solid #cacaca;
+  padding: 0.5em 1.5em;
+  margin-left: 1rem; }
+
+.section button {
+  padding: 1rem 1.5rem;
+  margin: 1em 1rem;
+  background-color: #ff3d00;
+  border: none;
+  text-transform: uppercase;
+  color: #fff; }
